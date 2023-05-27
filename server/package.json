@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/multipart": "^7.6.0",
+    "b4a": "^1.6.4",
+    "corestore": "^6.6.0",
+    "debouncify": "^1.0.0",
+    "fastify": "^4.17.0",
+    "hyperdrive": "^11.0.2",
+    "hyperswarm": "^4.4.1",
+    "localdrive": "^1.6.0",
+    "localstorage": "^1.0.1",
+    "random-access-memory": "^6.2.0"
+  }
+}
