@@ -22,7 +22,8 @@
     "hyperdrive": "^11.0.2",
     "hyperswarm": "^4.4.1",
     "localdrive": "^1.6.0",
-    "lowdb": "^6.0.1"
+    "lowdb": "^6.0.1",
+    "unix-path-resolve": "^1.0.2"
   },
   "devDependencies": {
     "standard": "^17.0.0"

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const CreateDrive = () => {
-  const [username, setUsername] = useState(null);
+  const [username, setUsername] = useState('');
   const [error, setError] = useState('');
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState('');
 
   const onUsernameChange = (e) => {
     setUsername(e.target.value)
@@ -26,8 +26,7 @@ const CreateDrive = () => {
       });
       setResult(response.data);
     } catch (error) {
-      console.error(error);
-      setError('Error uploading file. Please try again.');
+      setError('Error creating drive. Please try again.');
     }
   };
 
