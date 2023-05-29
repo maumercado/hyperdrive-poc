@@ -60,7 +60,7 @@ button:hover {
 }
 
 .file-list {
-  width: 300px;
+  display: inline-block;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -72,6 +72,10 @@ button:hover {
 .file-list-item {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.file-list-item:not(:first-child) {
+  margin-top: 10px;
 }
 
 .file-list-item:last-child {

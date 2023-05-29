@@ -1,0 +1,22 @@
+{
+  "drives": [
+    {
+      "discoveryKey": "value",
+      "key": "value",
+      "path": "value",
+      "username": "value"
+    },
+    {
+      "username": "test",
+      "key": "7b806c0cd97a68ec113b46a3a51918e3a57973380b2ef0a25e27b80d69efd6cd",
+      "discoveryKey": "b31178f3339b783bf83dd93485070d01a32e33e167c6645b2f8cd8561e2effb9",
+      "path": "./uploads/test"
+    },
+    {
+      "username": "mau",
+      "key": "0618b023bf5fcdfa18b9c2c406cea184bcc9b48ae61f59df5e230a7c1ac9a6b5",
+      "discoveryKey": "6a56923088c7567531c9b2cd0e7a4940e87ed3504c73d649056fa19d9e38f697",
+      "path": "./uploads/mau"
+    }
+  ]
+}

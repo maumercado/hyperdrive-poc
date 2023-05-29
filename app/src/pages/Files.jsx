@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const FilesPage = () => {
   const [files, setFiles] = useState([]);
+  const { drive } = useParams();
 
   useEffect(() => {
-    setFiles(['file1', 'file2', 'file3'])
-    // axios.get('http://localhost:3001/files').then(res => {
-    //   setFiles(res.data);
-    // });
-  }, []);
+    axios.get(`http://${window.location.hostname}:3001/${drive}/files`).then(res => {
+      setFiles(res.data);
+    });
+  }, [drive]);
 
   return (
     <div className="container">
@@ -21,7 +22,6 @@ const FilesPage = () => {
       </div>
     </div>
   );
-
 }
 
 export default FilesPage;

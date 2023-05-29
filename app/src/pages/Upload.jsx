@@ -5,6 +5,8 @@ const UploadPage = () => {
   const [selectedFile, setSelectedFile] = useState([]);
   const [description, setDescription] = useState('');
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState(null);
+
 
   const onFileChange = event => {
     setSelectedFile(event.target.files.item(0));
@@ -28,11 +30,11 @@ const UploadPage = () => {
     try {
       await axios({
         method: 'post',
-        url: 'http://localhost:3001/upload',
+        url: `http://${window.location.hostname}:3001/upload`,
         data: formData,
         headers: { 'Content-Type': 'multipart/form-data' }
       });
-      alert('File uploaded successfully!');
+      setSuccessMessage('File uploaded successfully!');
     } catch (error) {
       console.error(error);
       setError('Error uploading file. Please try again.');
@@ -48,6 +50,7 @@ const UploadPage = () => {
         <input type="text" placeholder="Description" onChange={onDescriptionChange} value={description} />
         <button onClick={onFileUpload}>Upload!</button>
       </form>
+      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 }
