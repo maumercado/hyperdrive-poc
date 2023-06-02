@@ -12,7 +12,7 @@ const fastify = Fastify({ logger: true })
 const IGNORE = /(\.drives|\.git |\.github | package - lock\.json | node_modules\/\.package-lock\.json|cores)(\/|$)/i
 
 await fastify.register(multipart)
-await fastify.register(fastifyCors, {origin: '*', methods: 'GET,POST,PUT,DELETE, OPTIONS'})
+await fastify.register(fastifyCors, { origin: '*', methods: 'GET,POST,PUT,DELETE, OPTIONS' })
 
 await fastify.register(hyperstart)
 

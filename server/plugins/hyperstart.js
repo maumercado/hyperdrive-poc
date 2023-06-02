@@ -5,10 +5,8 @@ import Corestore from 'corestore'
 
 const CORESTORE_BASEDIR = './hdrives'
 
-
 export default fp(async function (fastify) {
-
-  try{
+  try {
     const store = new Corestore(CORESTORE_BASEDIR)
     const drive = new Hyperdrive(store)
     const swarm = new Hyperswarm(drive)
@@ -25,10 +23,8 @@ export default fp(async function (fastify) {
     swarm.on('connection', (socket) => drive.corestore.replicate(socket))
 
     fastify.decorate('drive', drive)
-
   } catch (err) {
     fastify.log.error(err)
     throw err
   }
-
 })
