@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install:all": "npm install && cd server && npm install && cd ../ && cd app && npm install",
+    "install:server": "cd server && npm install",
+    "install:app": "cd app && npm install",
+    "install:all": "concurrently \"npm install\" \"npm run install:server\" \"npm run install:app\"",
     "start:server": "cd server && npm start",
     "start:app": "cd app && npm start",
     "start:all": "npx concurrently \"npm run start:server\" \"npm run start:app\""
