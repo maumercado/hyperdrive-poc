@@ -10,7 +10,7 @@ This project is a Fastify API that allows a user to upload files to a Hyperdrive
 
 ## Usage
 
-1. Start the server: `npm start`
+1. Start the server: `npm run start`
 2. Upload files to the Hyperdrive by making a POST request to `/upload`
 3. View uploaded files by making a GET request to `/files`
 4. Get the Hyperdrive key by making a GET request to `/info`

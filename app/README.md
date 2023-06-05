@@ -10,7 +10,7 @@ This project is a React application that allows a user to upload files to a Hype
 
 ## Usage
 
-1. Start the application: `npm start`
+1. Start the application: `npm run start`
 2. Upload files to the Hyperdrive by visiting the Upload page
 3. View uploaded files by visiting the Files page
 4. Get the Hyperdrive key by visiting the Info page
